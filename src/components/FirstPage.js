@@ -21,6 +21,7 @@ const FirstPage = ({props}) => {
 
     };
     // Resultat modul properties
+    // TODO: Fixa style/properties på boxarna/moduler
     const resultStyle = {
         display: "flexbox",
         flexDirection: "column",
@@ -29,7 +30,7 @@ const FirstPage = ({props}) => {
         color: "rgba(70, 99, 172, 1)",
     }
         
-    // TODO: Input är ej helt centrerad
+    // TODO: Input/searchbar är ej helt centrerad
     const inputStyle = {
         fontSize: "large",
         borderRadius: "10px",
@@ -66,6 +67,7 @@ const FirstPage = ({props}) => {
 
     return (
         <div style={containerStyle}>
+           
             <div>
                 {/* TODO: Lägg till src för logga och positionera */}
                 <img alt="LOGGA" style={imageStyle}/>
