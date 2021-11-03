@@ -49,7 +49,6 @@ const courseData = [{"kurskod":"TNA001","namn":"Matematisk grundkurs","forkunska
 {"kurskod":"TNM096","namn":"Artificiell intelligens - principer och tekniker","forkunskaper":"TND012, TND004","litteratur":"","om":null},
 {"kurskod":"TNM098","namn":"Avancerad visuell dataanalys","forkunskaper":"TND012, TNM046, TNA006, TNM048","litteratur":"Principles of Data Mining","om":null},
 {"kurskod":"TDDE45","namn":"Avancerad programvarudesign","forkunskaper":"TNG033, TND002, TND004","litteratur":"Head First Design Patterns#Design Patterns: Elements of Object-Oriented Software","om":null},
-{"kurskod":"TNM031","namn":"Nätverksprogrammering och säkerhet","forkunskaper":"TNMK30, TND004","litteratur":"","om":null},
 {"kurskod":"TNM089","namn":"Bildteknik","forkunskaper":"TNA002, TNG006, TNG032, TNM087, TNA005","litteratur":"Digital Color Imaging Handbook#Algorithms and Applications","om":null},
 {"kurskod":"TNM095","namn":"Artificiell intelligens för interaktiv media","forkunskaper":"","litteratur":"","om":null},
 {"kurskod":"TSBK03","namn":"Teknik för avancerade datorspel","forkunskaper":"TNG033, TNM046, TNA002, TNE043","litteratur":"So how can we make them scream?","om":null},

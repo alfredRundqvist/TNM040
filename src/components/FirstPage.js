@@ -80,7 +80,7 @@ const FirstPage = ({props}) => {
                 {/* Gå igenom resultatlistan och skriv ut kursmoduler */}
                 {resultList.map(d => {
                     return (
-                        d !== null?<p>{d.namn}</p>:null
+                        d !== null?<p key={d.kurskod}>{d.namn}</p>:null
                     )
                 })}
             </div>
