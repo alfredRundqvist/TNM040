@@ -2,7 +2,7 @@
     font-family: righteous;
 }
 body {
-    background-image: url("images/bakgrund.png");
+    background-image: url("../images/bakgrund.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%; 
@@ -12,5 +12,5 @@ body {
 
 @font-face {
     font-family: righteous;
-    src: url(fonts/Righteous-Regular.ttf);
+    src: url("../fonts/Righteous-Regular.ttf");
   }

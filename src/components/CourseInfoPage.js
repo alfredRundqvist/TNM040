@@ -1,4 +1,4 @@
-import Nav from '../Nav';
+import Nav from './Nav';
 const CourseInfoPage = ({props}) => {
     return (
         <div>
