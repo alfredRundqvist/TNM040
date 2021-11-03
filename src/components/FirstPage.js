@@ -1,5 +1,6 @@
 import courseData from '../data/courseData';
 import React, {useState} from 'react';
+import smartSearch from '../functions/utils'
 
 const FirstPage = ({props}) => {
     const [searchString, setSearchString] = useState("");
@@ -46,7 +47,7 @@ const FirstPage = ({props}) => {
 
     }
    
-        
+
     
 
     // TODO: Om vi vill ha filter behöver vi lägga till info i courseData, t.ex. huvudområde, termin m.m.
@@ -54,16 +55,20 @@ const FirstPage = ({props}) => {
         const courseName = d.namn.toLowerCase();
         const courseCode = d.kurskod.toLowerCase();
         const searchStringLower = searchString.toLowerCase();
-        const indexSubstrName = courseName.indexOf(searchStringLower);
+       // const indexSubstrName = courseName.indexOf(searchStringLower); // Kan substitueras med smart sökfunktion
         const indexSubstrCode = courseCode.indexOf(searchStringLower);
         
-        if ((indexSubstrName !== -1 || indexSubstrCode !== -1) && searchStringLower !== ""){
+        // Smart sökfunktion som känner igen stavfel med n antal bokstäver
+        var found = smartSearch(courseName, searchStringLower, 1); // Smartsearch, enter full word, substring and depth of search
+        
+        if ((found || indexSubstrCode !== -1) && searchStringLower !== ""){
             return d;
         }
-        else {
-            return null;
-        }
+        return null;
     });
+
+
+
 
     return (
         <div style={containerStyle}>
