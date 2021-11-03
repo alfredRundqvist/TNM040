@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 
 import {
   BrowserRouter as Router,
@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import FirstPage from './components/FirstPage.js';
-
+import CourseInfoPage from './components/CourseInfoPage';
 function App() {
 
  
@@ -27,7 +27,7 @@ function App() {
             */}
         </Route>
         <Route path="/:code">
-            <p>Kursinfosida</p>
+            <CourseInfoPage />
             {/* 
               KURSINFOSIDAN
                 HEADER
