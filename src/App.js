@@ -6,7 +6,13 @@ import {
   Route
 } from 'react-router-dom';
 
+import FirstPage from './components/FirstPage.js';
+
 function App() {
+
+ 
+
+
   return (
     <Router>
       <Switch>
@@ -31,12 +37,9 @@ function App() {
             */}
         </Route>
         <Route path="/">
-          <p>Söksida</p>
-          {/* 
-            LOGGA
-            SÖKRUTA
-            KURSMODULER (RESULTAT)
-          */}
+          <FirstPage />
+         
+          
           
         </Route>
       </Switch>
