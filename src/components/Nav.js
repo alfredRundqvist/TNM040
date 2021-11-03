@@ -1,7 +1,7 @@
 import {
   Link
 } from "react-router-dom"; 
-import './css/Nav.css';
+import '../css/Nav.css';
 // Kommentar: Bättre med titel som props istället för kursnamn? Eftersom nav används för både litteraturinfo och kursinfo.
 function Nav(kursnamn) {
 
