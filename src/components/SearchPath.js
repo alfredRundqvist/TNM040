@@ -12,14 +12,15 @@ const SearchPath = ({props}) => {
     return (
         <div>
             {pathComponents.map((d,i) => {
-                if (i == 0){
+                if (i === 0){
                     return  <Link key={i} to="/" style={linkStyle}>Sök/</Link>;
                 }
-                else if (i == 1){
+                else if (i === 1){
                     // ../ för att sökvägen ska länka rätt
                     
                     return <Link key={i} to={d} style={linkStyle}>{d}/</Link>
                 }
+                return null;
                 // TODO: Lägg till länk om i == 2, dvs litteraturinfosidan
                 // TODO: Eventuellt, ändra kurskod till kursnamn
             })}
