@@ -61,4 +61,20 @@ const courseData = [{"kurskod":"TNA001","namn":"Matematisk grundkurs","forkunska
 {"kurskod":"TDDE02","namn":"Mjukvarutekniskt entreprenörskap","forkunskaper":"TNG033, TNM046, TNG015, TNM040, TNM031, TNM096","litteratur":"","om":null},
 {"kurskod":"TNCG13","namn":"SFX - Tricks of the trade","forkunskaper":"TNCG15","litteratur":"","om":null}];
 
+function getObjectFromCode(code){
+    const arrayOfObjects = courseData.map(d => {
+        if (d.kurskod === code){
+            return d;
+        }
+        return undefined;
+    });
+    // Make array into single object.
+    arrayOfObjects.filter(d => {
+        return d === undefined;
+    })
+    return arrayOfObjects[0];
+
+}
+
 export default courseData;
+export {getObjectFromCode};
