@@ -70,7 +70,6 @@ const FirstPage = ({props}) => {
 
 
 
-
     return (
         <div style={containerStyle}>
            
@@ -86,8 +85,8 @@ const FirstPage = ({props}) => {
                 {/* Gå igenom resultatlistan och skriv ut kursmoduler */}
                 {resultList.map(kurs => {
                     return (
-                        kurs !== null?<div><p key={kurs.kurskod}>{kurs.namn}</p> <Button objekt = {kurs} key = {kurs.namn}/> </div>:null 
-                                            )
+                        kurs !== null?<Button objekt = {kurs} key = {kurs.kurskod}/>:null 
+                    )
                                             
                 })}
             </div>
