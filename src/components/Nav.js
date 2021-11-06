@@ -1,21 +1,20 @@
 import {
-  Link
+  useHistory,
 } from "react-router-dom"; 
 import '../css/Nav.css';
-// Kommentar: Bättre med titel som props istället för kursnamn? Eftersom nav används för både litteraturinfo och kursinfo.
-function Nav(kursnamn) {
 
-console.log(kursnamn);
+const Nav = ({titel}) => {
+const history = useHistory()
+
 
   return (
-    <div>
-      <div> 
-        <Link to={"../"}> <div> &lt; </div></Link> {/* TODO: Hitta "ett steg bakåt"istället för homepage*/}
-      </div>
-      <div>
-        <p>{kursnamn.header}</p>
+    <div className = 'nav-div'>  
+   <div onClick={() => history.goBack()} className = 'div-back'> &lt; </div>
+      <div className = 'div-header'>
+        {titel}
       </div>
     </div>
   );
 }
 export default Nav;
+

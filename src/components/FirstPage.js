@@ -1,6 +1,7 @@
 import courseData from '../data/courseData';
 import React, {useState} from 'react';
 import smartSearch from '../functions/utils'
+import Button from './Button';
 
 const FirstPage = ({props}) => {
     const [searchString, setSearchString] = useState("");
@@ -83,10 +84,11 @@ const FirstPage = ({props}) => {
                 {/* Om sökfältet är tomt vill vi inte visa "resultat" */}
                 {searchString === ""? null: <p>Resultat</p>}
                 {/* Gå igenom resultatlistan och skriv ut kursmoduler */}
-                {resultList.map(d => {
+                {resultList.map(kurs => {
                     return (
-                        d !== null?<p key={d.kurskod}>{d.namn}</p>:null
-                    )
+                        kurs !== null?<div><p key={kurs.kurskod}>{kurs.namn}</p> <Button objekt = {kurs} key = {kurs.namn}/> </div>:null 
+                                            )
+                                            
                 })}
             </div>
         </div>

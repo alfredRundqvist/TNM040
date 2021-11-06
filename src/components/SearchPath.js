@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import fromUrl from './fromUrl'
 const SearchPath = ({props}) => {
     // Hämtar den aktuella sökvägen och delar upp den i en array vid varje '/'
     const path = window.location.pathname;
@@ -18,7 +19,7 @@ const SearchPath = ({props}) => {
                 else if (i == 1){
                     // ../ för att sökvägen ska länka rätt
                     
-                    return <Link key={i} to={d} style={linkStyle}>{d}/</Link>
+                    return <Link key={i} to={d} style={linkStyle}>{fromUrl(d)}/</Link>
                 }
                 // TODO: Lägg till länk om i == 2, dvs litteraturinfosidan
                 // TODO: Eventuellt, ändra kurskod till kursnamn
