@@ -1,8 +1,8 @@
 
 function fromUrl(theUrl){
 
-    var urlString = theUrl.replace(/\+/g, " ");
-
+    const urlString = theUrl.replace(/\+/g, " ");// Kan inte ta åäö
+  
     return(urlString);
 }
 

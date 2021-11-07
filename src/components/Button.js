@@ -2,25 +2,24 @@ import {
   Link,
 } from "react-router-dom"; 
 import toUrl from './toUrl'
+import '../css/Button.css';
 
-  const Button = ({objekt}) => {
-  const divStyle = {
-    height: "10vh", 
-    backgroundColor: "blue"
+  const Button = ({objekt, isLiterature}) => {
+    if(objekt === undefined){// Om inga kurser finns i ex förkunskaper
+      return (<div></div>);
+    }
+    else if(isLiterature){
+
   }
-
-  const LinkStyle = {
-    backgroundColor: "green",
-    height: "2vh"
-  }
-console.log(objekt.name + ":)))")
-
-  return (
-    <div style = {divStyle}>
- <Link to= {"./" + toUrl(objekt.namn)} style = {LinkStyle} >HEJ</Link>
- <p>Namn:{objekt.namn}</p>
-    </div>
-  );
+    else{
+        return (
+        <div>
+          <Link to= {"./" + toUrl(objekt.namn)}>  <div className= 'divStyle'><div className='FIXATEXT'>{objekt.namn}</div> <div className = 'arrow'> &gt; </div></div></Link>
+          <br/>
+        </div>
+        );
+      
+    }
 }
 export default Button;
 

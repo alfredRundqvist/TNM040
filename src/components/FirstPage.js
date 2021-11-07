@@ -1,7 +1,7 @@
 import courseData from '../data/courseData';
 import React, {useState} from 'react';
 import smartSearch from '../functions/utils'
-import Button from './Button';
+import Button from './Button'
 
 const FirstPage = ({props}) => {
     const [searchString, setSearchString] = useState("");
@@ -86,7 +86,7 @@ const FirstPage = ({props}) => {
                 {/* Gå igenom resultatlistan och skriv ut kursmoduler */}
                 {resultList.map(kurs => {
                     return (
-                        kurs !== null?<div><p key={kurs.kurskod}>{kurs.namn}</p> <Button objekt = {kurs} key = {kurs.namn}/> </div>:null 
+                        kurs !== null?<div><Button objekt = {kurs} key = {kurs.namn}/> </div>:null 
                                             )
                                             
                 })}

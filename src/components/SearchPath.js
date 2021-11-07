@@ -12,7 +12,7 @@ const SearchPath = ({props}) => {
 
     return (
         <div>
-            {pathComponents.map((d,i) => {
+            {pathComponents.map((d,i) => {// Köra react fuzzy search? Väldigt smidig
                 if (i === 0){
                     return  <Link key={i} to="/" style={linkStyle}>Sök/</Link>;
                 }
@@ -21,7 +21,7 @@ const SearchPath = ({props}) => {
                     
                     return <Link key={i} to={d} style={linkStyle}>{fromUrl(d)}/</Link>
                 }
-                return null;
+                return null //Tillfällig
                 // TODO: Lägg till länk om i == 2, dvs litteraturinfosidan
                 // TODO: Eventuellt, ändra kurskod till kursnamn
             })}
