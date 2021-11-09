@@ -1,0 +1,35 @@
+
+* {
+    font-family: righteous;
+}
+
+
+.nav-div{
+    display: flex;  
+    color: #4663AC;
+    height: 10vh; 
+    background-color: #d2deeb;
+}
+
+.div-back{
+    width: calc(64px - 4vw);
+    padding-left: 4vw;
+    height: 100%;
+    font-size: 8vh;
+}
+
+.div-header{
+    width: 100%;
+    padding-right: 4vw;
+    font-size: 3vh;
+    margin: auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+img {
+    height: 10%;
+    width: 10%;
+}

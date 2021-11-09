@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 
 import {
   BrowserRouter as Router,
@@ -6,12 +6,19 @@ import {
   Route
 } from 'react-router-dom';
 
+import FirstPage from './components/FirstPage.js';
+import CourseInfoPage from './components/CourseInfoPage';
 function App() {
+
+ 
+
+
   return (
     <Router>
       <Switch>
         <Route path="/:code/:title">
             <p>Litteraturinfosida</p>
+         
             {/*
               LITTERATURINFO
                 HEADER
@@ -20,7 +27,7 @@ function App() {
             */}
         </Route>
         <Route path="/:code">
-            <p>Kursinfosida</p>
+            <CourseInfoPage />
             {/* 
               KURSINFOSIDAN
                 HEADER
@@ -31,12 +38,9 @@ function App() {
             */}
         </Route>
         <Route path="/">
-          <p>Söksida</p>
-          {/* 
-            LOGGA
-            SÖKRUTA
-            KURSMODULER (RESULTAT)
-          */}
+          <FirstPage />
+         
+          
           
         </Route>
       </Switch>
