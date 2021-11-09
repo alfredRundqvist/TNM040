@@ -3,7 +3,7 @@ import {
 } from "react-router-dom"; 
 import toUrl from './toUrl'
 
-  const Button = ({objekt}) => {
+  const Button = ({rubrik, underrubrik, url}) => {
   const divStyle = {
     height: "10vh", 
     backgroundColor: "#DCF0FF",
@@ -22,12 +22,13 @@ import toUrl from './toUrl'
 
   return (
     // Jag tänker att kurskod vore bättre att ha som URL. Kortare och slipper konvertera. /Alfred
-    <Link to= {"./" + toUrl(objekt.namn)} style={LinkStyle}>
+    <Link to= {"./" + url} style={LinkStyle}>
     <div style = {divStyle}>
-      <span>{objekt.namn}</span>
+      <span>{rubrik}</span>
       <br />
       <br/>
-      <span>{objekt.kurskod}</span>
+      {underrubrik !== undefined? <span>{underrubrik}</span> : null}
+      
 
     </div>
     </Link>
