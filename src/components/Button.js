@@ -11,7 +11,11 @@ import toUrl from './toUrl'
     marginTop: "4%",
     width: "95%",
     borderRadius: "10px",
-    boxShadow: "5px 5px 5px #4663AC33"
+    boxShadow: "5px 5px 5px #4663AC33",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column"
   }
 
   const LinkStyle = {
@@ -19,14 +23,14 @@ import toUrl from './toUrl'
     textDecoration: "none"
     
   }
+  
 
   return (
-    // Jag tänker att kurskod vore bättre att ha som URL. Kortare och slipper konvertera. /Alfred
+
     <Link to= {"./" + url} style={LinkStyle}>
     <div style = {divStyle}>
       <span>{rubrik}</span>
-      <br />
-      <br/>
+      
       {underrubrik !== undefined? <span>{underrubrik}</span> : null}
       
 
