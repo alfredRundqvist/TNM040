@@ -8,6 +8,7 @@ import {
 
 import FirstPage from './components/FirstPage.js';
 import CourseInfoPage from './components/CourseInfoPage';
+import LitteratureInfo from './components/LitteratureInfo';
 function App() {
 
  
@@ -17,7 +18,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/:code/:title">
-            <p>Litteraturinfosida</p>
+            
+            <LitteratureInfo />
          
             {/*
               LITTERATURINFO
