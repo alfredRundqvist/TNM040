@@ -1,7 +1,7 @@
 import Nav from './Nav'
 import SearchPath from './SearchPath';
 import { useParams } from 'react-router';
-import { getObjectFromCode } from '../data/courseData';
+import courseData, { getObjectFromCode } from '../data/courseData';
 import Header from './Header';
 import litteratureData from '../data/litteratureData';
 import Button from './Button';
@@ -34,6 +34,14 @@ const containerStyle = {
                     })}
                 <Header title="Förkunskaper" src={penna}/>
                 <Header title="Fortsättningskurser" src={qm}/>
+                {courseData.map(d => {
+                    const prerequisites = d.forkunskaper.split(", ");
+                    const found = prerequisites.find(element => {return element === code});
+                   
+                    return (
+                        found !== undefined? <Button rubrik={d.namn} url={d.kurskod} underrubrik={d.kurskod} key={d.kurskod} />: null
+                    )
+                })}
             </div>
         </div>
     )
