@@ -37,13 +37,11 @@ const LitteratureInfo = ({props}) => {
     let courseLitterature = "nothing";
 
     for(let i = 0; i < litteratureArray.length; i++){
-        console.log(title +":: "+  litteratureArray[i].titel);
         if(title === litteratureArray[i].titel){
             courseLitterature = litteratureArray[i];
             break;  
         }
     }
-    console.log(courseLitterature);
 
 return(
     <div>

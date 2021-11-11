@@ -6,6 +6,7 @@ const SearchPath = ({props}) => {
     // Hämtar den aktuella sökvägen och delar upp den i en array vid varje '/'
     const path = window.location.pathname;
     const pathComponents = path.split("/");
+    const code = pathComponents[1];
     
     const linkStyle = {
         textDecoration: "none",
@@ -25,9 +26,12 @@ const SearchPath = ({props}) => {
                     return <Link key={i} to={"../" + d} style={linkStyle}>{theCourse.namn}/</Link>
                 }
                 else if ( i === 2){
-                    const regex = /%20/ig;
-                    
-                    return <Link key={i} to={d} style={linkStyle}>{d.replaceAll(regex, " ")}</Link>
+                    // Fullösning som funkar! Hämtar lista på litteratur med kurskoden "code", sparar de kurser som har titel med samma första och sista bokstav som finns i sökvägen.
+                    // Funkar så länge två böcker i samma kurs inte börjar och slutar på samma bokstäver eller börjar /slutar på å,ä,ö.
+                    const littArray = getLitteratureInfoFromCode(code);
+                    const litt = littArray.filter(e => e.titel[0] === pathComponents[2][0] && e.titel[e.titel.length-1] === pathComponents[2][pathComponents[2].length-1]);
+                    console.log(litt);
+                    return <Link key={i} to={d} style={linkStyle}>{litt[0].titel}</Link>
                 }
                 return null;
             
