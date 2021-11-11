@@ -2,7 +2,7 @@ import courseData from '../data/courseData';
 import React, {useState} from 'react';
 import smartSearch from '../functions/utils'
 import Button from './Button';
-
+import image from '../images/MTlogga3.png';
 const FirstPage = ({props}) => {
     const [searchString, setSearchString] = useState("");
     
@@ -15,6 +15,7 @@ const FirstPage = ({props}) => {
     const imageStyle = {
         position: "absolute",
         top: "25%",
+        
     };
 
     const containerStyle = {
@@ -75,7 +76,7 @@ const FirstPage = ({props}) => {
            
             <div>
                 {/* TODO: Lägg till src för logga och positionera */}
-                <img alt="LOGGA" style={imageStyle}/>
+                <img alt="LOGGA" src={image} style={imageStyle} />
                 <br />
                 <input type="text" style={inputStyle} placeholder="Sök efter kurs" onChange={handleInput}></input>
             </div>
@@ -85,7 +86,7 @@ const FirstPage = ({props}) => {
                 {/* Gå igenom resultatlistan och skriv ut kursmoduler */}
                 {resultList.map(kurs => {
                     return (
-                        kurs !== null?<Button objekt = {kurs} key = {kurs.kurskod}/>:null 
+                        kurs !== null?<Button rubrik={kurs.namn} underrubrik={kurs.kurskod} url={kurs.kurskod} key = {kurs.kurskod}/>:null 
                     )
                                             
                 })}

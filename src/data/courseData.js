@@ -69,10 +69,11 @@ function getObjectFromCode(code){
         return undefined;
     });
     // Make array into single object.
-    arrayOfObjects.filter(d => {
-        return d === undefined;
+    const result = arrayOfObjects.filter(d => {
+        return d !== undefined;
     })
-    return arrayOfObjects[0];
+  
+    return result[0];
 
 }
 
