@@ -20,7 +20,7 @@ const containerStyle = {
    
 };
 
-
+    const prerequisites = theCourse.forkunskaper.split(", ");
     return (
         <div>
             <Nav titel={theCourse.namn}/>
@@ -32,7 +32,16 @@ const containerStyle = {
                         d.kurskoder === code? <Button rubrik={d.titel} url={code + "/" + d.titel} key={d.titel}/>:null
                         )
                     })}
+
                 <Header title="Förkunskaper" src={penna}/>
+                {prerequisites.map(d => {
+                const object = getObjectFromCode(d);
+                console.log(object);
+                return (
+                    object === undefined?null:<Button rubrik={object.namn} url={object.kurskod} key={object.namn} underrubrik={object.kurskod}/>
+                )
+                })}
+
                 <Header title="Fortsättningskurser" src={qm}/>
                 {courseData.map(d => {
                     const prerequisites = d.forkunskaper.split(", ");
