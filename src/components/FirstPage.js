@@ -13,14 +13,15 @@ const FirstPage = ({props}) => {
     
     // TODO: centrera logga
     const imageStyle = {
-        position: "absolute",
         top: "25%",
-        
+        position : "25%",
+        width: "100%",
+        margin: "auto"
     };
 
     const containerStyle = {
-        width: "90%",
-        margin: "0 auto",
+        width: "100%",
+        margin: "auto",
 
     };
     // Resultat modul properties
@@ -44,7 +45,8 @@ const FirstPage = ({props}) => {
         color: "rgba(70, 99, 172, 1)",
         position: "absolute",
         top: "50%",
-        width: "85%",         
+        width: "85%",
+           
        
 
     }
