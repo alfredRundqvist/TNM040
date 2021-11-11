@@ -7,11 +7,15 @@ import '../css/Nav.css';
 const Nav = ({titel}) => {
 const history = useHistory()
 
+const navStyle = {
+      fontSize: "5vh",
+};
+
 
   return (
     <div className = 'nav-div'>  
    <div onClick={() => history.goBack()} className = 'div-back'> &lt; </div>
-      <div className = 'div-header'>
+      <div style={navStyle} className = 'div-header'>
         {titel}
 
       </div>

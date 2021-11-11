@@ -14,3 +14,7 @@ body {
     font-family: righteous;
     src: url("../fonts/Righteous-Regular.ttf");
   }
+
+  ::placeholder{
+      color: #c2c3cf;
+  }

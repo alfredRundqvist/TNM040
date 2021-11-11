@@ -17,6 +17,7 @@ const containerStyle = {
     margin: "5%",
     display: "flex",
     flexDirection: "column",
+    width: "99%",
    
 };
 

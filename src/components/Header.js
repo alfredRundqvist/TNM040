@@ -5,10 +5,10 @@ const Header = ({title, src}) => {
         color: "#32436C",
         // position: "relative",
         // top: "-10px",
-        fontSize: "3vh"
+        fontSize: "4vh"
     }
     const imageStyle = {
-      
+      width: "8%",
     };
 
     const containerStyle = {
