@@ -9,7 +9,8 @@ const SearchPath = ({props}) => {
     
     const linkStyle = {
         textDecoration: "none",
-        color: "#4663AC"
+        color: "#4663AC",
+       
     }
 
     return (
@@ -26,11 +27,10 @@ const SearchPath = ({props}) => {
                 else if ( i === 2){
                     const regex = /%20/ig;
                     
-                    return <Link key={i} to={d} style={linkStyle}>{d.length < 25? d: d.slice(0,25).replaceAll(regex, " ") + "..."}</Link>
+                    return <Link key={i} to={d} style={linkStyle}>{d.replaceAll(regex, " ")}</Link>
                 }
                 return null;
-                // TODO: Lägg till länk om i == 2, dvs litteraturinfosidan
-                // TODO: Eventuellt, ändra kurskod till kursnamn
+            
             })}
         </div>
     )

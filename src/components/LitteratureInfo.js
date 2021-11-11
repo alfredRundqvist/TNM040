@@ -24,6 +24,11 @@ const ImgStyleLitterature = {
     border : "1px solid black"
 }
 
+const containerStyle = {
+    margin: "5%",
+   
+};
+
 const LitteratureInfo = ({props}) => {
 
     const {code} = useParams();
@@ -43,18 +48,20 @@ const LitteratureInfo = ({props}) => {
 return(
     <div>
         <Nav titel={courseLitterature.titel}/>
-        
-        <SearchPath /> 
-        <div style={ImgDiv}>
-            <img src={courseLitterature.url} alt="Error 404, image not found" style = {ImgStyleLitterature}/>
+        <div style={containerStyle}>
+
+            <SearchPath /> 
+            <div style={ImgDiv}>
+                <img src={courseLitterature.url} alt="Error 404, image not found" style = {ImgStyleLitterature}/>
+            </div>
+            <div style={LitInfoDiv}>
+                <p>{courseLitterature.typ +" titel: " + courseLitterature.titel}</p>
+                <p>{"Författare: " + courseLitterature.forfattare}</p>
+                <p>{"Upplaga: " +courseLitterature.upplaga +", utgiven år: "+ courseLitterature.ar}</p>
+                <p>{"Utgivare: " + courseLitterature.forlag}</p>
+            </div>
+            
         </div>
-        <div style={LitInfoDiv}>
-            <p>{courseLitterature.typ +" titel: " + courseLitterature.titel}</p>
-            <p>{"Författare: " + courseLitterature.forfattare}</p>
-            <p>{"Upplaga: " +courseLitterature.upplaga +", utgiven år: "+ courseLitterature.ar}</p>
-            <p>{"Utgivare: " + courseLitterature.forlag}</p>
-        </div>
-        
     </div>
     )
     
