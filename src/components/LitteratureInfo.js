@@ -50,7 +50,7 @@ return(
 
             <SearchPath /> 
             <div style={ImgDiv}>
-                <img src={courseLitterature.url} alt="Error 404, image not found" style = {ImgStyleLitterature}/>
+                <img src={courseLitterature.url} alt="Bild saknas" style = {ImgStyleLitterature}/>
             </div>
             <div style={LitInfoDiv}>
                 <p>{courseLitterature.typ +" titel: " + courseLitterature.titel}</p>
