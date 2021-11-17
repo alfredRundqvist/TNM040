@@ -11,6 +11,7 @@ const Nav = ({titel}) => {
 const linkStyle = {
   textDecoration: "none",
   color: "#4663AC",
+  fontSize: "5vh",
 };
 
 const path = window.location.pathname;

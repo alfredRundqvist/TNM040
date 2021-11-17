@@ -11,7 +11,7 @@ import toUrl from './toUrl'
     marginTop: "4%",
     width: "95%",
     borderRadius: "10px",
-    boxShadow: "3px 3px 5px #0008",
+    boxShadow: "0px 0px 5px #4663AC",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -21,10 +21,10 @@ import toUrl from './toUrl'
   const LinkStyle = {
     color: "#4663AC",
     textDecoration: "none",
-    
   }
+  
   const arrowStyle={
-    fontSize: "6vh"
+    fontSize: "6vh",
   }
 
   const textBox = {

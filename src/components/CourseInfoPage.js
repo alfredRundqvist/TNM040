@@ -14,9 +14,10 @@ const {code} = useParams();
 const theCourse = getObjectFromCode(code);
 
 const containerStyle = {
-    margin: "5%",
+    margin: "4%",
     display: "flex",
     flexDirection: "column",
+    width: "96%",
    
 };
 
