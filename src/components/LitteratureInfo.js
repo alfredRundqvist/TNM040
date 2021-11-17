@@ -90,27 +90,33 @@ return(
                     <Rate />
                 </div>
                 <table style={tableStyle}>
-                    <h1>Info</h1>
-                    <tr>
-                        <td>{courseLitterature.typ +" titel: "}</td>
-                        <td style={columnStyle}>{courseLitterature.titel}</td>
-                    </tr>
-                    <tr>
-                        <td>Författare: </td>
-                        <td style={columnStyle}>{courseLitterature.forfattare}</td>                    
-                    </tr>
-                    <tr>
-                        <td>Upplaga: </td>
-                        <td style={columnStyle}>{courseLitterature.upplaga}</td>
-                    </tr>
-                    <tr>
-                        <td>Utgiven år: </td> 
-                        <td style={columnStyle}>{courseLitterature.ar}</td>
-                    </tr>
-                    <tr>
-                        <td>Utgivare: </td>
-                        <td style={columnStyle}>{courseLitterature.forlag}</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th style={{fontSize: "7vh"}}>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{courseLitterature.typ +" titel: "}</td>
+                            <td style={columnStyle}>{courseLitterature.titel}</td>
+                        </tr>
+                        <tr>
+                            <td>Författare: </td>
+                            <td style={columnStyle}>{courseLitterature.forfattare}</td>                    
+                        </tr>
+                        <tr>
+                            <td>Upplaga: </td>
+                            <td style={columnStyle}>{courseLitterature.upplaga}</td>
+                        </tr>
+                        <tr>
+                            <td>Utgiven år: </td> 
+                            <td style={columnStyle}>{courseLitterature.ar}</td>
+                        </tr>
+                        <tr>
+                            <td>Utgivare: </td>
+                            <td style={columnStyle}>{courseLitterature.forlag}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             
