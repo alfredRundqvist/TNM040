@@ -1,0 +1,16 @@
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 12vw; /* Set a specific slider handle width */
+    height: 6vh; /* Slider handle height */
+    background: #4663AC; /* background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 10px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4663AC; /* background */
+    cursor: pointer; /* Cursor on hover */
+  }
