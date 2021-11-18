@@ -15,7 +15,7 @@ const FirstPage = ({props}) => {
     const imageStyle = {
         position: "absolute",
         top: "10%",
-        marginLeft: "0%",
+        marginLeft: "4%",
         height: "35%",
         width: "90%",
         
