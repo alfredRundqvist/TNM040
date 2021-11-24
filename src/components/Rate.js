@@ -1,22 +1,14 @@
 import '../css/slider.css'
 const Rate = ({props}) => {
-    const sliderStyle = {
-        width: "50%",
-        backgroundColor: "#a0a5bf",
-        background: "#a0a5bf",
-        outline: "none",
-        appearance: "none",
-        borderRadius: 8
-          
-    }
+ 
+    const containerStyle={
+
+    };
 
     const starStyle = {
-        width: "100",
-        height: "100",
-        fill: "#4663AC",
-        position: "relative",
-        top: 30,
-        overflow: "visible"
+        
+        fill: "#4663AC66",
+       
         
         
     }
@@ -24,19 +16,39 @@ const Rate = ({props}) => {
         document.getElementById("valueContainer").innerHTML =  e.target.value;
         
     }
-    const handleSubmit = () => {
-       
+    const handleSubmit = (e) => {
+        let thisId = parseInt(e.target.id);
+        console.log(thisId);
+        for (let id = 1; id <= thisId; id++){
+
+            document.getElementById(id).style.fill = "#4663ACff";
+
+        }
+        for (let id= thisId+1; id <= 5; id++){
+            document.getElementById(id).style.fill = "#4663AC66";
+        }
     }
     
     return (
         <div>
-            
-            <input type="range" min="1" max="5" style={sliderStyle} onInput={updateValue} className="slider"/>
-            <svg height="210" width="500" style={starStyle} className="button" onClick={() => handleSubmit()}>
-                <polygon points="50,5 20,99 95,39 5,39 80,99"  />
+           <svg style={containerStyle}> 
+            <g transform="translate(25,35)">
+                <polygon id="1" onClick={handleSubmit} style={starStyle} points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5"  />
+                
+                <g transform="translate(50,0)">
+                    <polygon id="2" onClick={handleSubmit} style={starStyle}points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5"  />
+                    <g transform="translate(50,0)">
+                        <polygon  id="3" onClick={handleSubmit} style={starStyle}points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5"  />
+                        <g transform="translate(50,0)">
+                            <polygon id="4"  onClick={handleSubmit}style={starStyle} points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5"  />
+                            <g transform="translate(50,0)">
+                                <polygon id="5"  onClick={handleSubmit}style={starStyle} points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5"  />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
             </svg>
-            <p id="valueContainer" style={{fontSize: "7vh",}}>5</p>
-            
         </div>
     );
 };

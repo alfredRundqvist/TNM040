@@ -62,13 +62,18 @@ const LitteratureInfo = ({props}) => {
     };
     const columnStyle = {
         width: "60%",
-        textAlign: "right"
+        textAlign: "right",
+        
     }
 
     const rateStyle = {
         position: "relative",
         top: "-5vh"
     };
+const cellStyle = {
+    verticalAlign: "top"
+}
+
 return(
     <div>
         <Nav titel={courseLitterature.titel}/>
@@ -97,23 +102,23 @@ return(
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{courseLitterature.typ +" titel: "}</td>
+                            <td style={cellStyle}>{courseLitterature.typ +" titel: "}</td>
                             <td style={columnStyle}>{courseLitterature.titel}</td>
                         </tr>
                         <tr>
-                            <td>Författare: </td>
+                            <td style={cellStyle}>Författare: </td>
                             <td style={columnStyle}>{courseLitterature.forfattare}</td>                    
                         </tr>
                         <tr>
-                            <td>Upplaga: </td>
+                            <td style={cellStyle}>Upplaga: </td>
                             <td style={columnStyle}>{courseLitterature.upplaga}</td>
                         </tr>
                         <tr>
-                            <td>Utgiven år: </td> 
+                            <td style={cellStyle}>Utgiven år: </td> 
                             <td style={columnStyle}>{courseLitterature.ar}</td>
                         </tr>
                         <tr>
-                            <td>Utgivare: </td>
+                            <td style={cellStyle}>Utgivare: </td>
                             <td style={columnStyle}>{courseLitterature.forlag}</td>
                         </tr>
                     </tbody>
