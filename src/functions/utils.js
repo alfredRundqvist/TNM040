@@ -15,4 +15,20 @@ function smartSearch(fullWord, substr, depth){
 }
 
 
+function addFilter(filterType, object){
+    // Om filtrerar efter termin
+    if (filterType.length === 1){
+        return object.termin.split(",").find(d => d === filterType);
+    }
+    // Om filtrerar efter huvudområde
+    else if (filterType.length > 1){
+        return object.huvudomrade.split(", ").find(d => d === filterType);
+
+    }
+    return true;
+    
+}   
+
+
 export default smartSearch;
+export {addFilter};
