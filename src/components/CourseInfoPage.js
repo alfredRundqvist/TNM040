@@ -21,6 +21,14 @@ const containerStyle = {
    
 };
 
+const finnsEj = {
+    textAlign: "center",
+    fontSize: "3vh",
+    color: "#4663AC"
+}
+
+let found1FortKurs = false;
+let found1litteratur = false;
     const prerequisites = theCourse.forkunskaper.split(", ");
     return (
         <div>
@@ -29,29 +37,40 @@ const containerStyle = {
                 <SearchPath />
                 <Header title="Kurslitteratur" src={bok} />
                 {litteratureData.map(d => {
+                    if (d.kurskoder === code){
+                        found1litteratur = true;
+                    }
                     return (
-                        d.kurskoder === code? <Button rubrik={d.titel} url={code + "/" + d.titel} key={d.titel}/>:null
+                        d.kurskoder === code? <Button rubrik={d.titel} url={code + "/" + d.titel} key={d.titel}/> : null
                         )
                     })}
+                {
+                found1litteratur === false? <div style={finnsEj}>Ingen kurslitteratur</div>: null
+                }
 
                 <Header title="Förkunskaper" src={penna}/>
                 {prerequisites.map(d => {
                 const object = getObjectFromCode(d);
-                console.log(object);
                 return (
-                    object === undefined?null:<Button rubrik={object.namn} url={object.kurskod} key={object.namn} underrubrik={object.kurskod}/>
+                    object === undefined?<div style={finnsEj}>Inga förkunskaper</div>:<Button rubrik={object.namn} url={object.kurskod} key={object.namn} underrubrik={object.kurskod}/>
                 )
                 })}
+                
 
                 <Header title="Fortsättningskurser" src={qm}/>
                 {courseData.map(d => {
                     const prerequisites = d.forkunskaper.split(", ");
                     const found = prerequisites.find(element => {return element === code});
-                   
+                   if (found !== undefined) {
+                    found1FortKurs = true;
+                   };
                     return (
                         found !== undefined? <Button rubrik={d.namn} url={d.kurskod} underrubrik={d.kurskod} key={d.kurskod} />: null
                     )
                 })}
+                {
+                found1FortKurs === false? <div style={finnsEj}>Inga fortsättningskurser</div>: null
+                }
             </div>
         </div>
     )
