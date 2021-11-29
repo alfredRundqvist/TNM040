@@ -52,7 +52,7 @@ let found1litteratur = false;
                 {prerequisites.map(d => {
                 const object = getObjectFromCode(d);
                 return (
-                    object === undefined?<div style={finnsEj}>Inga förkunskaper</div>:<Button rubrik={object.namn} url={object.kurskod} key={object.namn} underrubrik={object.kurskod}/>
+                    object === undefined?<div key="empty" style={finnsEj}>Inga förkunskaper</div>:<Button rubrik={object.namn} url={object.kurskod} key={object.namn} underrubrik={object.kurskod}/>
                 )
                 })}
                 
