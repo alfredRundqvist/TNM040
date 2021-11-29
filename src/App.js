@@ -18,32 +18,13 @@ function App() {
     <Router>
       <Switch>
         <Route path="/:code/:title">
-            
             <LitteratureInfo />
-         
-            {/*
-              LITTERATURINFO
-                HEADER
-                SÖKVÄG
-                LITTERATUR
-            */}
         </Route>
         <Route path="/:code">
             <CourseInfoPage />
-            {/* 
-              KURSINFOSIDAN
-                HEADER
-                SÖKVÄG
-                LITTERATURMODULER
-                KURSMODULER
-                ...
-            */}
         </Route>
         <Route path="/">
           <FirstPage />
-         
-          
-          
         </Route>
       </Switch>
     </Router>
