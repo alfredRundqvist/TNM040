@@ -5,9 +5,9 @@ import courseData, { getObjectFromCode } from '../data/courseData';
 import Header from './Header';
 import litteratureData from '../data/litteratureData';
 import Button from './Button';
-import bok from '../images/Bok.png';
-import penna from '../images/Penna.png';
-import qm from '../images/questionmark.png';
+import bok from '../images/Bok.svg';
+import tegel from '../images/tegelsten.svg';
+import kikare from '../images/kikare.svg';
 const CourseInfoPage = ({props}) => {
 
 const {code} = useParams();
@@ -48,7 +48,7 @@ let found1litteratur = false;
                 found1litteratur === false? <div style={finnsEj}>Ingen kurslitteratur</div>: null
                 }
 
-                <Header title="Förkunskaper" src={penna}/>
+                <Header title="Förkunskaper" src={tegel}/>
                 {prerequisites.map(d => {
                 const object = getObjectFromCode(d);
                 return (
@@ -57,7 +57,7 @@ let found1litteratur = false;
                 })}
                 
 
-                <Header title="Fortsättningskurser" src={qm}/>
+                <Header title="Fortsättningskurser" src={kikare}/>
                 {courseData.map(d => {
                     const prerequisites = d.forkunskaper.split(", ");
                     const found = prerequisites.find(element => {return element === code});
